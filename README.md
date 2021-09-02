@@ -6,6 +6,13 @@ $ npm install           # install the dependencies
 $ npm start             # run the server
 ```
 
+Optional environment variables:
+
+| Variable | Description |
+| --- | --- |
+| `ALLOW_EIO3` | Enable compatibility with Socket.IO v2 clients |
+| `ALLOW_CORS` | Allow Cross-Origin Resource Sharing (CORS) from all origins |
+
 *Client*
 
 ```js

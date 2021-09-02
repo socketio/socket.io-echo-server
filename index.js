@@ -1,9 +1,11 @@
 const { Server } = require("socket.io");
 const port = process.env.PORT || 3000;
 const allowEIO3 = process.env.ALLOW_EIO3 !== undefined;
+const allowCORS = process.env.ALLOW_CORS !== undefined;
 
 const io = new Server({
   allowEIO3,
+  cors: allowCORS
 });
 
 const handleNewConnection = (socket) => {
