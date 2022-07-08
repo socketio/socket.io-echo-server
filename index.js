@@ -1,7 +1,7 @@
 const { Server } = require("socket.io");
 const port = process.env.PORT || 3000;
-const allowEIO3 = process.env.ALLOW_EIO3 !== undefined;
-const allowCORS = process.env.ALLOW_CORS !== undefined;
+const allowEIO3 = !!process.env.ALLOW_EIO3;
+const allowCORS = !!process.env.ALLOW_CORS;
 
 const io = new Server({
   allowEIO3,
@@ -30,3 +30,4 @@ io.of("/").on("connection", handleNewConnection);
 io.of(/^\/\w+$/).on("connection", handleNewConnection);
 
 io.listen(port);
+console.log(`listening to *:${port}`)
