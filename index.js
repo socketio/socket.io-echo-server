@@ -30,3 +30,4 @@ io.of("/").on("connection", handleNewConnection);
 io.of(/^\/\w+$/).on("connection", handleNewConnection);
 
 io.listen(port);
+console.log(`listening to *:${port}`)
