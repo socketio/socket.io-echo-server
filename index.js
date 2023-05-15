@@ -1,5 +1,5 @@
-const { Server } = require("socket.io");
-const { instrument } = require("@socket.io/admin-ui");
+import { Server } from "socket.io";
+import { instrument } from "@socket.io/admin-ui";
 
 const port = process.env.PORT || 3000;
 const allowEIO3 = process.env.ALLOW_EIO3 !== undefined;
